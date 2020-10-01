@@ -33,7 +33,7 @@ namespace ChattingClient
                 string name = login.NameTextBox.Text;
                 string ip = login.IpTextBox.Text;
                 string message = "이름: " + name + " ip: " + ip;
-                MessageBox.Show(message);
+                MessageBox.Show(message,"Result",MessageBoxButton.OK,MessageBoxImage.Information);
             }
         }
     }

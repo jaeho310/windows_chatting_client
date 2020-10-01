@@ -23,41 +23,48 @@ namespace ChattingClient
         {
             InitializeComponent();
         }
-        public string GetName
-        {
-            get 
-            { 
-                return NameTextBox.Text; 
-            }
-            private set 
-            { 
-                NameTextBox.Text = value; 
-            }
-        }
+        //public string userName
+        //{
+        //    get 
+        //    { 
+        //        return NameTextBox.Text; 
+        //    }
+        //    private set 
+        //    { 
+        //        NameTextBox.Text = value; 
+        //    }
+        //}
 
-        public string GetIp
-        {
-            get
-            {
-                return IpTextBox.Text;
-            }
-            private set 
-            { 
-                IpTextBox.Text = value; 
-            }
-        }
+        //public string userIp
+        //{
+        //    get
+        //    {
+        //        return IpTextBox.Text;
+        //    }
+        //    private set 
+        //    { 
+        //        IpTextBox.Text = value; 
+        //    }
+        //}
 
         private void Login_Btn_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(NameTextBox.Text) || string.IsNullOrEmpty(IpTextBox.Text))
             {
-                MessageBox.Show("이름을 정확히 입력해주세요", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("이름과 ip를 정확히 입력해주세요", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            string loginCheck = string.Format("당신은 {0} 님이 맞습니까?", NameTextBox.Text);
-            MessageBoxResult messageBoxResult = MessageBox.Show(loginCheck, "Question", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (messageBoxResult == MessageBoxResult.No)
+            string nameCheck = string.Format("당신은 {0} 님이 맞습니까?", NameTextBox.Text);
+            MessageBoxResult nameMessageBoxResult = MessageBox.Show(nameCheck, "Question", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (nameMessageBoxResult == MessageBoxResult.No)
+            {
+                return;
+            }
+
+            string ipCheck = string.Format("서버의 ip는 {0} 이 맞습니까?", IpTextBox.Text);
+            MessageBoxResult ipmessageBoxResult = MessageBox.Show(ipCheck, "Question", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (ipmessageBoxResult == MessageBoxResult.No)
             {
                 return;
             }
