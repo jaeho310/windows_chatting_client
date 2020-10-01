@@ -23,8 +23,18 @@ namespace ChattingClient
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Login_Btn_Click(object sender, RoutedEventArgs e)
+        {
             Login login = new Login();
-            login.Show();
+            if (login.ShowDialog() == true)
+            {
+                string name = login.NameTextBox.Text;
+                string ip = login.IpTextBox.Text;
+                string message = "이름: " + name + " ip: " + ip;
+                MessageBox.Show(message);
+            }
         }
     }
 }

@@ -5,5 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChattingClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Width="180" Height="100" Content="로그인" Name="Login_Btn" Click="Login_Btn_Click"></Button>
+    </Grid>
 </Window>
