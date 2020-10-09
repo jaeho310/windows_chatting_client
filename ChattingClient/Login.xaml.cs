@@ -23,29 +23,29 @@ namespace ChattingClient
         {
             InitializeComponent();
         }
-        //public string userName
-        //{
-        //    get 
-        //    { 
-        //        return NameTextBox.Text; 
-        //    }
-        //    private set 
-        //    { 
-        //        NameTextBox.Text = value; 
-        //    }
-        //}
+        public string userName
+        {
+            get
+            {
+                return NameTextBox.Text;
+            }
+            private set
+            {
+                NameTextBox.Text = value;
+            }
+        }
 
-        //public string userIp
-        //{
-        //    get
-        //    {
-        //        return IpTextBox.Text;
-        //    }
-        //    private set 
-        //    { 
-        //        IpTextBox.Text = value; 
-        //    }
-        //}
+        public string userIp
+        {
+            get
+            {
+                return IpTextBox.Text;
+            }
+            private set
+            {
+                IpTextBox.Text = value;
+            }
+        }
 
         private void Login_Btn_Click(object sender, RoutedEventArgs e)
         {

@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChattingClient"
         mc:Ignorable="d"
-        Title="ChattingServiceClient" Height="450" Width="800">
-    <Grid>
-        <Button Width="150" Height="80" Content="로그인" Name="Login_Btn" Click="Login_Btn_Click"></Button>
-    </Grid>
+        Title="ChattingServiceClient" Height="450" Width="600" Background="#BCBCBC">
+    <Border BorderThickness="0" CornerRadius="10" Margin="10,30,10,10" Background="White">
+        <StackPanel Orientation="Vertical" Margin="40,15,40,5">
+            <TextBlock Foreground="Gray" FontSize="50" FontFamily="Ebrima" Text="Chatting Program" TextAlignment="Center" Margin="0,0,0,20"></TextBlock>
+            <TextBlock x:Name="Info" Foreground="Gray" FontSize="20" Text="채팅프로그램을 이용려면 먼저 로그인해주세요" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30"></TextBlock>
+            <Button x:Name="Login_Btn" FontSize="20" Content ="로그인" Margin="0,0,0,25" Height="45" Click="Login_Btn_Click"/>
+            <Button x:Name="OneOnOneChatting_Btn" FontSize="20" Content ="1:1채팅" Margin="0,0,0,25" Height="45" Click="OneOnOneChatting_Btn_Click"/>
+            <Button x:Name="GroupChatting_Btn" FontSize="20" Content ="그룹채팅" Margin="0,0,0,25" Height="45" Click="GroupChatting_Btn_Click"/>
+        </StackPanel>
+    </Border>
 </Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="ChattingClient.UserListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChattingClient"
+        mc:Ignorable="d"
+        Title="UserListWindow" Height="400" Width="250" Background="#BCBCBC">
+    <Grid Margin="10,10,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListView x:Name="UserListView" Grid.Row="0" BorderBrush="White">
+            <ListView.Resources>
+                <DataTemplate x:Key="UserCellTemplate">
+                    <Grid Width="190">
+                        <TextBlock  HorizontalAlignment="Center" Text="{Binding userName}"/>
+                    </Grid>
+                </DataTemplate>
+
+                <DataTemplate x:Key="UserHeaderTemplate">
+                    <Grid Width="190">
+                        <TextBlock HorizontalAlignment="Center" Text="User"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.Resources>
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn HeaderTemplate="{StaticResource UserHeaderTemplate}" CellTemplate="{StaticResource UserCellTemplate}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Row="1" Margin="0,5,0,5">
+            <Button x:Name="Chatting_btn" Click="Chatting_btn_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>
