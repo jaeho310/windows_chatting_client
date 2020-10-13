@@ -10,7 +10,7 @@
 > 로그인, 1:1채팅, 그룹채팅 기능 제공
 
 ## 서버 깃허브 주소
-https://github.com/jaeho310/windows_chatting_server
+> https://github.com/jaeho310/windows_chatting_server
 
 ## 코드 설명용 블로그
-https://frozenpond.tistory.com/2
+> https://frozenpond.tistory.com/2
