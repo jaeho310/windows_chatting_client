@@ -11,3 +11,6 @@
 
 ## 서버 깃허브 주소
 https://github.com/jaeho310/windows_chatting_server
+
+## 코드 설명용 블로그
+https://frozenpond.tistory.com/2
